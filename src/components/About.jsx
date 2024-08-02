@@ -12,6 +12,7 @@ import {
 export default function About({ color }) {
   const [isEducationLegend, setIsEducationLegend] = useState(false);
   const [isInternshipLegend, setIsInternshipLegend] = useState(false);
+  const [isSkillLegend, setIsSkillLegend] = useState(false);
 
   const handleEducationClick = () => {
     setIsEducationLegend(!isEducationLegend);
@@ -20,6 +21,11 @@ export default function About({ color }) {
   const handleInternshipClick = () => {
     setIsInternshipLegend(!isInternshipLegend);
   };
+
+  const handleSkillClick = () => {
+    setIsSkillLegend(!isSkillLegend);
+  };
+
   return (
     <section className="sec--2" id="about">
       <p style={{ color }}>Get to know</p>
@@ -37,7 +43,19 @@ export default function About({ color }) {
           </h3>
           <img src="./BSU-logo.png" alt="BSU logo" />
           {isEducationLegend && (
-            <div className="additional-info">Additional information here</div>
+            <div className="additional-info">
+              <h2 className="header-info">Batangas State University</h2>
+              <p className="additional-text">
+                Bachelor of Science in Computer Engineering <br />
+                Alangilan, Batangas City, Batangas <br />
+                August 2020 – August 2024
+              </p>
+              <h2 className="header-info">Achievements</h2>
+              <p className="additional-text">
+                Cumlaude <br />
+                Cybersculpt Marathon of Minds (2nd Placer)
+              </p>
+            </div>
           )}
         </div>
         <div
@@ -66,6 +84,24 @@ export default function About({ color }) {
               <p className="add-info">
                 Backend Developer Intern <br /> Febuary - May 2024
               </p>
+            </div>
+          )}
+        </div>
+        <div
+          className={`skills ${isSkillLegend ? "legend" : ""}`}
+          onClick={handleSkillClick}
+        >
+          <h3 style={{ color: isSkillLegend ? "black" : color }}>Skills</h3>
+          <img src="./skills.png" alt="skill logo" />
+          {isSkillLegend && (
+            <div className="additional-info">
+              <ul className="list-info">
+                <li>Programming Languages: Python, Javascript & C++</li>
+                <li>Web Development: React, Express, Node Js</li>
+                <li>Database Management: Mysql, Firebase</li>
+                <li>Design Tools: Blender, Figma</li>
+                <li>Well-trained in computer desktop troubleshooting, hardware maintenance and repair</li>
+              </ul>
             </div>
           )}
         </div>

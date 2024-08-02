@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faFileDownload } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function Contact({ color }) {
@@ -35,6 +35,16 @@ export default function Contact({ color }) {
           </a>
         </div>
       </div>
+      <div className="download-cv">
+        <FontAwesomeIcon icon={faFileDownload} className="icon-card" style={{color}} />
+        <a href="/koko-cv.pdf" download className="no-underline">
+          <p style={{color}}>Download CV</p>
+        </a>
+      </div>
+      <div className="bottom-logo">
+
+      </div>
+
     </section>
   );
 }

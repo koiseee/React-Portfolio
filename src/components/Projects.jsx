@@ -59,7 +59,7 @@ export default function Project({ color }) {
           onMouseLeave={handleMouseLeave}
         >
           <div className="card-image">
-            <img src="./medical-system.png" alt="" />
+            <img src="./Seed-germinate.jpg" alt="" />
           </div>
           <span style={{ color }}>Iot Based Seed Germination System</span>
           {hovered && (
@@ -80,9 +80,9 @@ export default function Project({ color }) {
           onMouseLeave={handleMouseLeave}
         >
           <div className="card-image">
-            <img src="./medical-system.png" alt="" />
+            <img src="./Suman-ordering-system.png" alt="" />
           </div>
-          <span style={{ color }}></span>
+          <span style={{ color }}>Ordering System</span>
           {hovered && (
             <div
               className="clr-glow"
