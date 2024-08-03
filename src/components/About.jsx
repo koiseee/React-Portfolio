@@ -28,7 +28,7 @@ export default function About({ color }) {
 
   return (
     <section className="sec--2" id="about">
-      <p style={{ color }}>Get to know</p>
+      <p style={{ color }} className="get">Get to know</p>
       <div className="wave">
         <h3 style={{ color }}>About Me</h3>
         <FontAwesomeIcon icon={faHand} className="waveHand" style={{ color }} />

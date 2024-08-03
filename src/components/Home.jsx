@@ -30,7 +30,7 @@ export default function Home({ color }) {
 
   return (
     <section className="sec--1" id="home">
-        <div
+      <div
         className={`card--container ${isFlipped ? "flipped" : ""}`}
         onClick={handleFlip}
       >
@@ -54,9 +54,7 @@ export default function Home({ color }) {
           JavaScript, React, Node.js, and more.
         </p>
       </div>
-      <div>
-        <img className="bg-image" src="./koko-white.svg" alt="" />
-      </div>
+      <div className="top-logo"></div>
     </section>
   );
 }

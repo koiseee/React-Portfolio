@@ -8,12 +8,11 @@ body {
   width: 100%;
   font-family: "Bebas Neue", sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-.bg-image {
-  width: 500px;
-  margin-right: -400px;
-  opacity: 0.2;
+html {
+  overflow-x: hidden;
 }
 
 .logo {
@@ -227,8 +226,8 @@ html {
   height: 80vh;
   margin: 0;
   padding: 0;
-  position: absolute;
-  width: 110vw;
+
+  width: 100vw;
   background-color: rgb(22, 22, 29);
   display: flex;
   align-items: center;
@@ -329,7 +328,7 @@ img {
   position: relative;
   height: 100vh;
   background-color: rgb(22, 22, 29);
-  margin-top: 37%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -416,7 +415,6 @@ img {
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease;
-  border: 1px solid #707070;
 }
 
 .education h3 {
@@ -464,7 +462,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .list-info {
@@ -474,7 +471,6 @@ img {
 .additional-info .header-info {
   margin-bottom: -40px;
 }
-
 
 .additional-info .info-map {
   display: flex;
@@ -515,7 +511,6 @@ img {
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease;
-  border: 1px solid #707070;
 }
 
 .internship h3 {
@@ -616,7 +611,6 @@ img {
   width: 60px; /* Smaller logo size */
 }
 
-
 .additional-info {
   position: absolute;
   top: 30px;
@@ -626,7 +620,7 @@ img {
   height: 120vh;
   background-color: rgb(22, 22, 29);
   margin: 0;
-  position: absolute;
+  /* position: absolute; */
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -844,7 +838,6 @@ img {
 .sec--4 {
   position: relative;
   height: 50dvh;
-  margin-top: 50%;
   background-color: rgb(22, 22, 29);
   display: flex;
   flex-direction: column;
@@ -919,7 +912,6 @@ img {
   justify-content: center;
   position: relative;
   cursor: pointer;
-  
 }
 
 .download-cv::after {
@@ -938,13 +930,14 @@ img {
   width: 100%;
 }
 
-.download-cv a, .icon-card {
+.download-cv a,
+.icon-card {
   text-decoration: none;
   z-index: 1;
 }
 
 .bottom-logo {
-  background: url('./koko-white.svg');
+  background: url("./koko-white.svg");
   height: 500px;
   width: 500px;
   background-repeat: no-repeat;
@@ -953,4 +946,318 @@ img {
   margin-bottom: 0;
   z-index: 0;
   opacity: 0.3;
+}
+
+.top-logo {
+  background: url("./koko-white.svg");
+  height: 500px;
+  width: 500px;
+  background-repeat: no-repeat;
+  z-index: 0;
+  opacity: 0.3;
+  position: absolute;
+  margin-left: 70%;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 150px;
+  height: 100%;
+  background-color: #fff;
+  transition: right 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.363);
+  backdrop-filter: blur(3px);
+}
+
+.sidebar-link {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-direction: column;
+}
+
+.sidebar-link li {
+  margin-top: 20px;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar-toggle {
+  display: none; /* Hide by default */
+}
+
+@media (max-width: 450px) {
+  .top-logo {
+    width: 10px;
+  }
+
+  .sidebar-toggle {
+    display: flex;
+    margin-left: 180px;
+    margin-top: -60px;
+    border-style: none;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    justify-content: flex-end;
+    position: absolute;
+    width: 50%;
+  }
+
+  .nav--bar {
+    display: none;
+  }
+
+  .nav--bar.show {
+    display: block; /* Show navigation bar when sidebar is open */
+  }
+
+  .sidebar {
+    display: block; /* Show sidebar */
+  }
+
+  .sidebar .nav--bar {
+    display: none; /* Hide nav bar inside sidebar */
+  }
+
+  /* Styles for close button inside sidebar */
+  .close-btn {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin-left: 110px;
+    margin-top: 10px;
+  }
+
+  .logo {
+    width: 30px;
+    margin-left: 20px;
+    margin-top: -60px;
+    margin-bottom: 0;
+  }
+
+  .color-picker {
+    margin-left: -200px;
+    margin-top: -20px;
+  }
+
+  .hover-text {
+    font-size: 2rem;
+    margin-top: -25px;
+  }
+
+  .text-container {
+    width: 100%;
+    height: 100px;
+  }
+
+  .sidebar-link a {
+    text-decoration: none;
+  }
+
+  .card--container {
+    width: 12.5rem;
+    height: 70%;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  .card--front {
+    width: 145%;
+  }
+
+  .card--back {
+    width: 145%;
+    margin-left: -45px;
+  }
+
+  .card img {
+    object-fit: contain;
+    margin-left: -50px;
+  }
+
+  .sec--1 {
+    width: 100%;
+    height: 200px;
+  }
+
+  .sec--1 .home--container {
+    margin-top: 100px;
+    margin-right: 50px;
+  }
+
+  .sec--1 .card {
+    width: 100px;
+  }
+
+  .sec--1 h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  .sec--1 h1 {
+    font-size: 20px;
+  }
+
+  .sec--1 h4 {
+    margin-top: 2px;
+    font-size: 8px;
+  }
+
+  .sec--1 p {
+    font-size: 8px;
+  }
+
+  .sec--1 h1,
+  h3,
+  h4,
+  p {
+    text-align: center;
+  }
+
+  .sec--2 {
+    height: 40rem;
+  }
+
+  .sec--2 .get {
+    font-size: 10px;
+  }
+
+  .sec--2 .wave h3 {
+    font-size: 20px;
+    margin-left: -4px;
+  }
+
+  .sec--2 .waveHand {
+    font-size: 20px;
+  }
+
+  .sec--2-about {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sec--2-about img {
+    width: 20px;
+  }
+
+  .education {
+    width: 60%;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.226);
+  }
+
+  .education h3 {
+    font-size: 20px;
+  }
+
+  .education.legend {
+    width: 60%;
+  }
+
+  .education.legend h3 {
+    font-size: 15px;
+    margin-top: 5px;
+  }
+
+  .education.legend img {
+    width: 20px;
+  }
+
+  .internship {
+    width: 60%;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.226);
+  }
+
+  .internship h3 {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
+  .internship img {
+    margin-top: 0;
+  }
+
+  .internship.legend {
+    width: 60%;
+  }
+
+  .internship.legend h3 {
+    font-size: 15px;
+    margin-top: -18px;
+  }
+
+  .internship.legend img {
+    width: 20px;
+  }
+
+  .info-map a {
+    font-size: 18px;
+  }
+
+  .internship .additional-info {
+    font-size: 7px;
+  }
+
+  .internship .info-map .icon-marker {
+    font-size: 5px;
+  }
+
+  .skills {
+    width: 60%;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.226);
+  }
+
+  .skills h3 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .skills img{
+    margin-top: 0;
+  }
+
+  .skills.legend {
+    width: 60%;
+  }
+
+  .skills.legend h3 {
+    font-size: 15px;
+    margin-top: -20px;
+  }
+
+  .skills.legend img {
+    width: 20px;
+  }
+
+  .skills .list-info li{
+    font-size: 9px ;
+  }
+
+  .list-info {
+    margin-top: 5px;
+  }
+
+  .header-info {
+    font-size: 8px;
+  }
+
+  .additional-info {
+    margin-top: -20px;
+  }
+
+  .additional-info p {
+    margin-top: 40px;
+    font-size: 7px;
+  }
+
+  .sec--3 {
+    height: 100%;
+  }
 }
