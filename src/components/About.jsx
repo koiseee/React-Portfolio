@@ -28,7 +28,9 @@ export default function About({ color }) {
 
   return (
     <section className="sec--2" id="about">
-      <p style={{ color }} className="get">Get to know</p>
+      <p style={{ color }} className="get">
+        Get to know
+      </p>
       <div className="wave">
         <h3 style={{ color }}>About Me</h3>
         <FontAwesomeIcon icon={faHand} className="waveHand" style={{ color }} />
@@ -84,6 +86,21 @@ export default function About({ color }) {
               <p className="add-info">
                 Backend Developer Intern <br /> Febuary - May 2024
               </p>
+              <ul className="info-list">
+                <li>Developed RESTful APIs using ExpressJS (NodeJS).</li>
+                <li>
+                  Implemented CRUD controllers, enhancing data management
+                  efficiency.
+                </li>
+                <li>
+                  Utilized MySQL ORM Technologies (Sequelize) for complex table
+                  relations, ensuring robust data integrity.
+                </li>
+                <li>
+                  Collaborated with a team of developers using Git and Postman,
+                  streamlining the development workflow.
+                </li>
+              </ul>
             </div>
           )}
         </div>
@@ -100,7 +117,10 @@ export default function About({ color }) {
                 <li>Web Development: React, Express, Node Js</li>
                 <li>Database Management: Mysql, Firebase</li>
                 <li>Design Tools: Blender, Figma</li>
-                <li>Well-trained in computer desktop troubleshooting, hardware maintenance and repair</li>
+                <li>
+                  Well-trained in computer desktop troubleshooting, hardware
+                  maintenance and repair
+                </li>
               </ul>
             </div>
           )}

@@ -36,15 +36,20 @@ export default function Contact({ color }) {
         </div>
       </div>
       <div className="download-cv">
-        <FontAwesomeIcon icon={faFileDownload} className="icon-card" style={{color}} />
-        <a href="/koko-cv.pdf" download className="no-underline">
-          <p style={{color}}>Download CV</p>
+        <FontAwesomeIcon
+          icon={faFileDownload}
+          className="icon-card"
+          style={{ color }}
+        />
+        <a
+          href="/De Torres, Mhel Yrvin Z. - Resume.pdf"
+          download
+          className="no-underline"
+        >
+          <p style={{ color }}>Download CV</p>
         </a>
       </div>
-      <div className="bottom-logo">
-
-      </div>
-
+      <div className="bottom-logo"></div>
     </section>
   );
 }

@@ -990,6 +990,10 @@ img {
   display: none; /* Hide by default */
 }
 
+.info-list li  {
+  font-size: 12px;
+}
+
 @media (max-width: 450px) {
   .top-logo {
     width: 10px;
@@ -1170,6 +1174,10 @@ img {
     width: 20px;
   }
 
+  .education.legend p {
+    font-size: 5px;
+  }
+
   .internship {
     width: 60%;
     box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.226);
@@ -1199,6 +1207,7 @@ img {
 
   .info-map a {
     font-size: 18px;
+    margin-top: -42px;
   }
 
   .internship .additional-info {
@@ -1219,7 +1228,7 @@ img {
     margin-top: 10px;
   }
 
-  .skills img{
+  .skills img {
     margin-top: 0;
   }
 
@@ -1236,8 +1245,8 @@ img {
     width: 20px;
   }
 
-  .skills .list-info li{
-    font-size: 9px ;
+  .skills .list-info li {
+    font-size: 9px;
   }
 
   .list-info {
@@ -1259,5 +1268,9 @@ img {
 
   .sec--3 {
     height: 100%;
+  }
+
+  .info-list li  {
+     visibility: hidden;
   }
 }
